@@ -37,7 +37,7 @@ fs.readFile("./data/start.txt", "utf-8", (err, filename) => {
   console.log(filename);
 
   //start.txt dosyasının içeriisnde yazan dosyayı oku
-  const sonuc = fs.readFileSync(`./data/${filename}`, "utf-8");
+  const sonuc = fs.readFileSync(filename, "utf-8");
 
   //sonucu konsola yzdır
   console.log("sonuc", sonuc);

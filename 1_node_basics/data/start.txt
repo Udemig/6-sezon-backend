@@ -1,1 +1,1 @@
-output.txt
+./data/output.txt
