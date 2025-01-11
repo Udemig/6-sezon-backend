@@ -2,6 +2,10 @@
 
 // gerekli modülleri çağırdık
 const http = require("http");
+const fs = require("fs");
+
+// kendi oluşturduğumuz fonskiyonu import et
+const replaceTemplate = require("./modules/replaceTemplate");
 
 /*
 * createServer (), verdiğimiz dinleyiciyi fonksiyona her geldiğinde tetikler.
@@ -15,15 +19,43 @@ const http = require("http");
 
 */
 
-//http.createServer fonk. bir HTTP sunucusu oluşturur.
+/*
+Routing
+* API'ya gelen isteğin hangi endpoint (uç nokta / yol )'a geldğinin tespit edip ona göre farklı cevapşar gönderme işlemine routing denir.
+* Routing için client'ın hangi yola ve hangi http methodu ile istek attığını bilmemiz gerekiyor.
 
+*/
+
+// html şablon verilerine eriş
+let tempOverview = fs.readFileSync("./templates/overview.html", "utf-8");
+let tempProduct = fs.readFileSync("./templates/product.html", "utf-8");
+let tempCard = fs.readFileSync("./templates/card.html", "utf-8");
+
+// json dosyasındaki verilere eriş
+let jsonData = fs.readFileSync("./dev-data/data.json", "utf-8");
+
+// json veriisni js formatına çevir
+const data = JSON.parse(jsonData);
+
+//http.createServer fonk. bir HTTP sunucusu oluşturur.
 const server = http.createServer((request, response) => {
   console.log("😀 API'YE İSTEK GELDİ .");
 
-  //gelen isteğin detaylarını konsola yazdır.
-  console.log(request.method + " isteği geldi"); //GET isteği geldi
+  // gelen isteğin url'ine göre farklı cevap gönder
+  switch (request.url) {
+    case "/overview":
+      //ürünler dizisinde ki eleman saysısı kadar kart oluştur
+      const cards = data.map((item) => replaceTemplate(tempCard, item));
 
-  response.end("😄 SERVER TARAFINDAN SELAMLAR.");
+      tempOverview = tempOverview.replace("{%PRODUCT_CARDS%}", cards);
+      return response.end(tempOverview);
+
+    case "/product":
+      return response.end(tempProduct);
+
+    default:
+      return response.end("<h1>Tanimlanmayan Yol</h1>");
+  }
 });
 
 // Bir dinleyici oluşturup hangi porta gelen isteklerin dinleneceğini söylemeliyiz.
