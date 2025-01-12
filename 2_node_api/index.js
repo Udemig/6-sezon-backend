@@ -3,6 +3,7 @@
 // gerekli modülleri çağırdık
 const http = require("http");
 const fs = require("fs");
+const url = require("url");
 
 // kendi oluşturduğumuz fonskiyonu import et
 const replaceTemplate = require("./modules/replaceTemplate");
@@ -39,10 +40,13 @@ const data = JSON.parse(jsonData);
 
 //http.createServer fonk. bir HTTP sunucusu oluşturur.
 const server = http.createServer((request, response) => {
-  console.log("😀 API'YE İSTEK GELDİ .");
+  console.log("😀 API'YE İSTEK GELDİ .", request.url);
+
+  //obje dağıtma yöntemi ile aldık
+  const { query, pathname } = url.parse(request.url, true);
 
   // gelen isteğin url'ine göre farklı cevap gönder
-  switch (request.url) {
+  switch (pathname) {
     case "/overview":
       //ürünler dizisinde ki eleman saysısı kadar kart oluştur
       const cards = data.map((item) => replaceTemplate(tempCard, item));
@@ -51,7 +55,15 @@ const server = http.createServer((request, response) => {
       return response.end(tempOverview);
 
     case "/product":
-      return response.end(tempProduct);
+      //1) dizide ki doğru elemanı bul
+      const item = data.find((item) => item.id == query.id);
+
+      //2) detay sayfasında  html'i bulunna elemanın verilerine göre güncelle
+      const output = replaceTemplate(tempProduct, item);
+
+      //3) güncel html'i client'a gönder
+
+      return response.end(output);
 
     default:
       return response.end("<h1>Tanimlanmayan Yol</h1>");

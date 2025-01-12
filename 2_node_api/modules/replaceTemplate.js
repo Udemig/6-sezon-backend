@@ -5,8 +5,8 @@ const replaceTemplate = (html, data) => {
   let output = html.replace(/{%PRODUCTNAME%}/g, data.productName);
 
   // fiyat , miktar , görsel, id ve besin değerleri değişkemlerini değiştiriyoruz.
-  output = output.replace("{%QUANTITY%}", data.quantity);
-  output = output.replace("{%PRICE%}", data.price);
+  output = output.replace(/{%QUANTITY%}/g, data.quantity);
+  output = output.replace(/{%PRICE%}/g, data.price);
   output = output.replace(/{%IMAGE%}/g, data.image);
   output = output.replace(/{%ID%}/g, data.id);
   output = output.replace(/{%NUTRIENTS%}/g, data.id);
