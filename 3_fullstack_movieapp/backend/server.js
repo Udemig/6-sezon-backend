@@ -2,10 +2,14 @@ const http = require("http");
 const getRequest = require("./methods/get");
 const postRequest = require("./methods/post");
 const deleteRequest = require("./methods/delete");
+const defaultRequest = require("./methods/default");
 
 //1) server oluştur
 const server = http.createServer((req, res) => {
   console.log("🥵 istek geldi", req.method);
+
+  //cevaba gönderilecek içeriğin tipini header olarak ekle
+  res.setHeader("Content-type", "application/json");
 
   //gelen isteğin. method türüne göre clienta farklı cevaplar gönderelim
   //kod kalabalığı olmaması için isteklere cevap gönderen fonksiyonları ayrı dosyalarda tanımladık.
@@ -20,17 +24,7 @@ const server = http.createServer((req, res) => {
       return deleteRequest(req, res);
 
     default:
-      //cevabın durum kodunu belirle
-      res.statusCode = 404;
-
-      //cevaba gönderilecek içeriğin tipini header olarak ekle
-      res.setHeader("content-type", "application/json");
-
-      //cevabın içeriğini belirle
-      res.write(JSON.stringify({ message: "İstek adresi tanımsız" }));
-
-      //cevabı clienta gönder
-      return res.end();
+      return defaultRequest(req, res);
   }
 });
 
