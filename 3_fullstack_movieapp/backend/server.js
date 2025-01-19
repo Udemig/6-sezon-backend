@@ -11,6 +11,9 @@ const server = http.createServer((req, res) => {
   //cevaba gönderilecek içeriğin tipini header olarak ekle
   res.setHeader("Content-type", "application/json");
 
+  //kaynak paylaşımında sorun yaşamamak için (CORS)
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
   //gelen isteğin. method türüne göre clienta farklı cevaplar gönderelim
   //kod kalabalığı olmaması için isteklere cevap gönderen fonksiyonları ayrı dosyalarda tanımladık.
   switch (req.method) {

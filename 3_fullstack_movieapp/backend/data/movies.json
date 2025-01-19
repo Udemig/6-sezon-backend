@@ -1,29 +1,5 @@
 [
   {
-    "title": "Yenilmezler: Sonsuzluk Savaşı",
-    "year": "2020",
-    "genre": ["Aksiyon", "Macera", "Fantastik"],
-    "rating": "6.9",
-    "id": "3711087e-2863-427e-86d8-1548c3e7b0db",
-    "description": "Süper kahramanlar, evrenin kaderini belirlemek için Thanos'a karşı savaşıyor.",
-    "director": "Anthony Russo, Joe Russo",
-    "cast": ["Robert Downey Jr.", "Chris Evans", "Chris Hemsworth"],
-    "duration": "2s 29dk",
-    "language": "İngilizce"
-  },
-  {
-    "id": "131c8241-fcae-4425-94b7-e410fb285018",
-    "title": "Görevimiz Tehlike: Hayalet Protokol",
-    "year": "2015",
-    "genre": ["Aksiyon", "Macera", "Fantastik"],
-    "rating": "3.5",
-    "description": "Ethan Hunt ve ekibi, yeni bir tehdit ile karşı karşıya kalıyor.",
-    "director": "Christopher McQuarrie",
-    "cast": ["Tom Cruise", "Rebecca Ferguson", "Jeremy Renner"],
-    "duration": "2s 11dk",
-    "language": "İngilizce"
-  },
-  {
     "title": "Görevimiz Tehlike",
     "year": "2021",
     "genre": ["Aksiyon", "Bilim Kurgu", "Suç"],
