@@ -6,6 +6,7 @@ import {
   getRecipe,
   updateRecipe,
 } from "../controllers/recipeControllers.js";
+import controlId from "../middleware/controlId.js";
 
 //Router > server.js dosyasında route tanımı yapmamızı sağlıyor
 
@@ -17,9 +18,9 @@ router.route("/api/v1/recipes").get(getAllRecipes).post(createRecipes);
 
 router
   .route("/api/v1/recipes/:id")
-  .get(getRecipe)
-  .patch(updateRecipe)
-  .delete(deleteRecipe);
+  .get(controlId, getRecipe)
+  .patch(controlId, updateRecipe)
+  .delete(controlId, deleteRecipe);
 
 //serverda kullanamk için routerı export et
 export default router;

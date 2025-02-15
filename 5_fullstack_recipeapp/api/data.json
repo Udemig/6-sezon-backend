@@ -1,36 +1,7 @@
 [
   {
-    "id": "1",
-    "recipeName": "Mercimek Çorbası",
-    "category": "Çorba",
-    "ingredients": [
-      "1 su bardağı kırmızı mercimek",
-      "1 adet soğan",
-      "1 adet havuç",
-      "1 adet patates",
-      "2 yemek kaşığı sıvı yağ",
-      "6 su bardağı su",
-      "Tuz",
-      "Karabiber",
-      "Kimyon"
-    ],
-    "instructions": [
-      "Mercimeği yıkayın ve süzün.",
-      "Soğanı doğrayın, havuç ve patatesi küçük küpler halinde kesin.",
-      "Sıvı yağı bir tencerede ısıtın, doğranmış soğanı ekleyip pembeleşene kadar kavurun.",
-      "Havuç ve patatesi ekleyip birkaç dakika daha kavurun.",
-      "Mercimeği ve suyu ekleyin, kaynamaya bırakın.",
-      "Kaynadıktan sonra altını kısıp tencerenin kapağını kapatın, mercimekler iyice yumuşayana kadar pişirin.",
-      "Çorbayı blenderdan geçirin, tuz ve baharatları ekleyin.",
-      "Limon suyu ile servis yapın."
-    ],
-    "recipeTime": "30",
-    "servingSuggestion": "Yanında taze ekmekle servis edilebilir.",
-    "image": "https://picsum.photos/501"
-  },
-  {
     "id": "2",
-    "recipeName": "Karnıyarık",
+    "recipeName": "köfte",
     "category": "Ana Yemek",
     "ingredients": [
       "4 adet patlıcan",
@@ -52,7 +23,7 @@
       "Üzerine sıcak su ekleyip 180 derece fırında 20 dakika pişirin.",
       "Sıcak servis yapın."
     ],
-    "recipeTime": "45",
+    "recipeTime": "15",
     "servingSuggestion": "Yanında pirinç pilavı ile servis edilebilir.",
     "image": "https://picsum.photos/502"
   },
@@ -135,5 +106,40 @@
     "recipeTime": "45",
     "servingSuggestion": "Yanında ayran ile servis edilebilir.",
     "image": "https://picsum.photos/505"
+  },
+  {
+    "id": "8c9017c7-0684-404e-b6a8-e1df53ebf723",
+    "recipeName": "Kaburga Dolması",
+    "category": "Ana Yemek",
+    "ingredients": [
+      "1 adet kuzu kaburga",
+      "2 su bardağı pirinç",
+      "1 adet soğan",
+      "2 yemek kaşığı tereyağı",
+      "2 yemek kaşığı sıvı yağ",
+      "1 tatlı kaşığı tuz",
+      "1 çay kaşığı karabiber",
+      "1 çay kaşığı kimyon",
+      "1 çay kaşığı tarçın",
+      "1 çay kaşığı pul biber",
+      "1 su bardağı sıcak su",
+      "1 yemek kaşığı dolmalık fıstık",
+      "1 yemek kaşığı kuş üzümü",
+      "4 su bardağı et suyu"
+    ],
+    "instructions": [
+      "Kuzu kaburganın içini açarak bir cep oluşturun.",
+      "Soğanı ince doğrayın ve tereyağında kavurun.",
+      "Dolmalık fıstığı ekleyip hafifçe kavurun.",
+      "Yıkanmış pirinci ekleyin ve birkaç dakika kavurmaya devam edin.",
+      "Tuz, baharatlar, kuş üzümü ve sıcak suyu ekleyerek karıştırın, suyunu çekene kadar pişirin.",
+      "Hazırlanan iç pilavı kaburganın içine doldurun ve ağız kısmını dikin.",
+      "Kaburgayı geniş bir tencereye alın ve üzerini geçecek kadar su ekleyerek yaklaşık 2-2.5 saat pişirin.",
+      "Piştikten sonra kaburgayı fırın tepsisine alın ve üzerine tereyağı sürerek 200°C fırında 15 dakika kızartın.",
+      "Dilimleyerek servis yapın."
+    ],
+    "recipeTime": "180",
+    "servingSuggestion": "Yanında yoğurt ve yeşilliklerle servis edilebilir.",
+    "image": "https://picsum.photos/seed/32835b96-7cf7-4bbb-927e-6bfaafed280a/500/500"
   }
 ]
