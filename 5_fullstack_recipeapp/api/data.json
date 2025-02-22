@@ -11,14 +11,16 @@
       "2 yemek kaşığı sıvı yağ",
       "1 yemek kaşığı salça",
       "Tuz",
-      "Karabiber",
-      "Pul biber"
+      "Karabiber"
     ],
-    "instructions": [
+    "": [
       "Patlıcanları alacalı soyup kızgın yağda hafifçe kızartın.",
-      "Soğanı doğrayıp sıvı yağda kavurun, üzerine kıymayı ekleyip pişirin.",
-      "Domatesleri rendeleyin, kıymaya ekleyip birkaç dakika daha kavurun.",
-      "Salçayı ve baharatları ekleyin, karıştırın.",
+      "Soğanı doğrayıp sıvı yağda kavurun",
+      " üzerine kıymayı ekleyip pişirin.",
+      "Domatesleri rendeleyin",
+      " kıymaya ekleyip birkaç dakika daha kavurun.",
+      "Salçayı ve baharatları ekleyin",
+      " karıştırın.",
       "Kızarmış patlıcanları fırın kabına dizin ve ortalarını açarak iç harcı doldurun.",
       "Üzerine sıcak su ekleyip 180 derece fırında 20 dakika pişirin.",
       "Sıcak servis yapın."
@@ -141,5 +143,25 @@
     "recipeTime": "180",
     "servingSuggestion": "Yanında yoğurt ve yeşilliklerle servis edilebilir.",
     "image": "https://picsum.photos/seed/32835b96-7cf7-4bbb-927e-6bfaafed280a/500/500"
+  },
+  {
+    "recipeName": "mantı",
+    "category": "hamur",
+    "recipeTime": "12",
+    "instructions": ["1.adım", "2.adım"],
+    "servingSuggestion": "yopurt",
+    "ingredients": ["kıyma", "un"],
+    "id": "5e673422-8e4c-48f5-b207-6aab7b762796",
+    "image": "https://picsum.photos/seed/6099e25b-5024-40e9-8e02-00f0c5416733/500/500"
+  },
+  {
+    "recipeName": "patates",
+    "category": "sebze",
+    "recipeTime": "60",
+    "instructions": ["1.adım", "2.adım"],
+    "servingSuggestion": "dxgfchvjbkn",
+    "ingredients": ["kıyma salça", "salça", "su"],
+    "id": "f5681f2b-94f5-4507-b8ca-8b8ae4a1254b",
+    "image": "https://picsum.photos/seed/9744ef7b-b0e3-4fdf-8925-7d6292da99d8/500/500"
   }
 ]
