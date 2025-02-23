@@ -6,6 +6,8 @@ import { MdEdit } from "react-icons/md";
 import DeleteButton from "../components/DeleteButton";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
+import { PiForkKnifeFill } from "react-icons/pi";
+import { FaClock } from "react-icons/fa";
 
 const Detail = () => {
   const { id } = useParams();
@@ -34,7 +36,7 @@ const Detail = () => {
             Düzenle
           </Link>
 
-          <DeleteButton />
+          <DeleteButton disabled={!data?.id} productId={data?.id} />
         </div>
       </div>
 
@@ -46,6 +48,60 @@ const Detail = () => {
         data && (
           <div>
             <h1 className="title text-3xl"> {data.recipeName} </h1>
+
+            <div className="flex gap-4 my-5">
+              <span className="badge">
+                <PiForkKnifeFill />
+                {data.category}{" "}
+              </span>
+              <span className="badge">
+                <FaClock />
+                {data.recipeTime} dak.
+              </span>
+            </div>
+
+            <img
+              className="rounded-lg max-h-[350px] w-full object-cover"
+              src={data.image}
+              alt={data.recipeName}
+            />
+
+            <div className="my-5">
+              <h2 className="title">Malzemeler</h2>
+
+              <ul>
+                {data.ingredients.map((i, key) => (
+                  <li className="font-semibold text-lg" key={key}>
+                    {" "}
+                    {i}{" "}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="my-5">
+              <h2 className="title">Malzemeler</h2>
+
+              <ol className="list-decimal ps-4">
+                {data.instructions.map((i, key) => (
+                  <li className="font-semibold text-lg" key={key}>
+                    {" "}
+                    {i}{" "}
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {data.servingSuggestion && (
+              <div className="my-5">
+                <h2 className="title">Sunum Önerisi</h2>
+
+                <p className="text-lg font-semibold">
+                  {" "}
+                  {data.servingSuggestion}{" "}
+                </p>
+              </div>
+            )}
           </div>
         )
       )}
