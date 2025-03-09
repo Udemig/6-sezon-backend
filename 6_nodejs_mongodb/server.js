@@ -15,3 +15,19 @@ mongoose
 app.listen(process.env.PORT, () => {
   console.log(`Server ${process.env.PORT} portunda çalışmay başladı.`);
 });
+
+// örnek
+//1) koleksiyona kaydedilecek belgelerin özelliklerini belirlediğimiz şema
+const userSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+});
+
+//2) CRUD operasyonlarını geçekleştirmek için kullanılan bir model oluştur
+const User = mongoose.model("User", userSchema);
+
+// 3) User kolaeksiyonuna yeni belge ekle
+User.create({
+  name: "Ali",
+  age: 34,
+});
