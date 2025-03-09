@@ -22,3 +22,11 @@
 - Githuba gönderip herkesle paylaşmak istemeyeceğimiz değerler bire env variable olarak saklanır.
 - gitıgnore dosyasına env dosyasını eklersek bu değişkenler localimize erişilebilir olurken githuba gönderilmez.
 - Genelde hassas bilgiler, veritabanı, admin bilgilrti vb.durumlarda kullanırız.
+
+# Operatörler
+
+- gt (>): greather than
+- gte (>=): greather than or equals
+- lt (<): less than
+- lte (<=): less than or equals
+- ne (!=): not equals
