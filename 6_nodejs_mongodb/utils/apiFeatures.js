@@ -8,7 +8,7 @@ class APIFeatures {
   }
   filter() {
     //1) turlar için sorgu oluştur(filtreleme)
-    this.query = this.query.find(this.formattedQuery);
+    this.query = this.query.find(this.formattedParams);
 
     return this;
   }
